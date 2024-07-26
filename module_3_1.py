@@ -14,16 +14,30 @@ def string_info(stroka):
     return otdacha
 
 
-# def is_contains:
+def is_contains(contains, my_list):
+    x = 'FALSE'
+    for i in range(len(my_list)):
+        if type(my_list[i]) != list:
+            if contains.lower() == my_list[i].lower():
+                x = 'TRUE'
+                count_calls()
+                return x
+        else:
+            z = my_list[i]
+            for j in range(len(z)):
+                if contains.lower() == z[j].lower():
+                    x = 'TRUE'
+                    return x
+    count_calls()
+    return x
 
 
 calls = 0
-string = 'ygUYLltqyueLHG986jhjhk'
-contains = 'БульБулЯтоР'
-spisok = ['Вертолет', 'Автожир', 'Бульбулятор', 'Самолет']
 
-print(string_info(string))
+
+print(string_info('БульБулЯтоР'))
+print(string_info('Транжира'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
+print(is_contains('Urban', ['Вертолет', 'Автожир', ['Дерижабль', 'Самолет']]))
 print(calls)
-a = ['cycle', ['recycling', 'cyclic']]
-print(len(a))
-print(len(a[1]))
+
