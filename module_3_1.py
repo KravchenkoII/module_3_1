@@ -33,11 +33,8 @@ def is_contains(contains, my_list):
 
 
 calls = 0
-
-
 print(string_info('БульБулЯтоР'))
 print(string_info('Транжира'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
 print(is_contains('Urban', ['Вертолет', 'Автожир', ['Дерижабль', 'Самолет']]))
 print(calls)
-
